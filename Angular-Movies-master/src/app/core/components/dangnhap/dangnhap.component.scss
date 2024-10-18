@@ -1,0 +1,91 @@
+.contents_container {
+  display: flex;
+  justify-content: center; // Căn giữa theo chiều ngang
+  align-items: center; // Căn giữa theo chiều dọc
+  height: 100vh; // Chiều cao bằng viewport
+  background-color: #333; // Màu nền tối
+  padding: 20px;
+}
+
+.login-form {
+  background-color: #444; // Màu nền của form
+  border-radius: 10px; // Bo góc
+  padding: 20px; // Khoảng cách bên trong
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); // Đổ bóng
+  width: 100%;
+  max-width: 400px; // Chiều rộng tối đa
+  margin: 0 auto; // Căn giữa form
+  text-align: center; // Căn giữa tất cả nội dung trong form
+}
+
+.form-title {
+  color: white; // Màu chữ tiêu đề
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%; // Chiều rộng 100%
+  border-collapse: collapse; // Xóa khoảng cách giữa các ô
+}
+
+.form-label {
+  color: white; // Màu chữ cho nhãn
+  text-align: left;
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #555; // Màu nền của ô input
+  color: white; // Màu chữ trong ô input
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: #007bff; // Màu viền khi focus
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+}
+
+.forgot-password {
+  color: #007bff; // Màu chữ cho link quên mật khẩu
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline; // Gạch chân khi hover
+  }
+}
+
+.btn-primary {
+  background-color: #007bff; // Màu nền nút
+  color: white; // Màu chữ nút
+  border: none; // Xóa viền
+  border-radius: 5px; // Bo góc nút
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #0056b3; // Màu nền khi hover
+  }
+}
+
+.text-center {
+  text-align: center;
+  color: white; // Màu chữ
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center; // Căn giữa các nút xã hội
+  margin-top: 10px; // Khoảng cách trên các nút xã hội
+}
+
+.btn-link {
+  color: white; // Màu chữ cho nút xã hội
+  transition: color 0.2s;
+
+  &:hover {
+    color: #007bff; // Màu khi hover
+  }
+}

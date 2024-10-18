@@ -1,0 +1,52 @@
+<main class="contents_container">
+  <form class="login-form">
+    <h2 class="form-title">Đăng Nhập</h2>
+    
+    <table>
+      <tr>
+        <td>
+          <label class="form-label left-align" for="form2Example1">Tài khoản đăng nhập</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" id="form2Example1" class="form-control" [(ngModel)]="Username" name="Username" required />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="form-label left-align" for="form2Example2">Mật khẩu</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="password" id="form2Example2" class="form-control" [(ngModel)]="password" name="password" required />
+        </td>
+      </tr>
+      <tr>
+        <td class="text-center">
+          <a href="#!" class="forgot-password">Quên mật khẩu?</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="submit" class="btn btn-primary btn-block mb-4" (click)="onSubmit()">Đăng Nhập</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="text-center">
+          <p>Chưa có tài khoản? <a href="#!">Đăng ký</a></p>
+          <p>hoặc đăng nhập với:</p>
+          <div class="social-buttons">
+            <a [routerLink]="'/'">
+              <img [ngSrc]="'assets/img/facebook.png'" width="50" height="50" [priority]="true">
+            </a>
+            <a [routerLink]="'/'">
+              <img [ngSrc]="'assets/img/pngegg.png'" width="50" height="40" [priority]="true">
+            </a>
+          </div>          
+        </td>
+      </tr>
+    </table>
+  </form>
+</main>
