@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const routes = require('./routes/routes');
 
-// Thiết lập tùy chọn strictQuery
+
 mongoose.set('strictQuery', false);
 
 app.use(cors(
@@ -14,7 +14,6 @@ app.use(cors(
    
   ));
 
-// Kết nối tới cơ sở dữ liệu MongoDB
 mongoose.connect("mongodb://127.0.0.1:27017/User_Web")
     .then(() => {
         console.log("DB Connected!");
@@ -23,7 +22,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/User_Web")
         console.log("DB Connection Error:", error);
     });
 
-// Lắng nghe trên cổng 8087
 app.listen(8088, (error) => {
     if (error) {
         console.log(error);
