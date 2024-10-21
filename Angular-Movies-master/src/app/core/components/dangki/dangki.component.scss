@@ -82,6 +82,15 @@
   margin-top: 10px; // Khoảng cách trên các nút xã hội
 }
 
-.social-buttons a {
-  margin: 0 5px; // Khoảng cách giữa các nút xã hội
+.btn-link {
+  color: white; // Màu chữ cho nút xã hội
+  transition: color 0.2s;
+
+  &:hover {
+    color: #007bff; // Màu khi hover
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px; // Khoảng cách giữa các nút
+  }
 }

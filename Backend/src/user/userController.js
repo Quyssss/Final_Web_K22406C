@@ -1,41 +1,34 @@
-const userModel = require('./userModel');
+const userService = require('./userService');
 
-// Hàm tạo người dùng
 const createUserControllerFn = async (req, res) => {
     try {
-        const body = req.body;
-        const userModelData = new userModel({
-            Username: body.Username,
-            Passwork: body.Passwork,
-        });
-        await userModelData.save();
+        console.log(req.body);
+        const status = await userService.createuserDBService(req.body);
+        console.log(status);
 
-        res.status(200).send({
-            status: true,
-            message: "User created successfully",
-        });
-    } catch (error) {
-        res.status(400).send({
-            status: false,
-            message: error.message,
-        });
-    }
-};
-
-// Hàm tìm một người dùng (giả định bạn có hàm này)
-const findOneUserController = async (req, res) => {
-    try {
-        const user = await userModel.findOne({ Username: req.query.Username });
-        if (!user) {
-            return res.status(404).send({ status: false, message: "User not found" });
+        if (status) {
+            res.status(201).send({ status: true, message: "User created successfully" });
+        } else {
+            res.status(400).send({ status: false, message: "Error creating user" });
         }
-        res.status(200).send({ status: true, user });
-    } catch (error) {
-        res.status(400).send({ status: false, message: error.message });
+    } catch (err) {
+        console.error("Error in createUserController:", err);
+        res.status(500).send({ status: false, message: "Internal server error" });
     }
 };
 
-module.exports = {
-    createUserControllerFn,
-    findOneUserController,
+const loginUserControllerFn = async (req, res) => {
+    try {
+        const result = await userService.loginuserDBService(req.body);
+        if (result.status) {
+            res.status(200).send({ status: true, message: result.msg });
+        } else {
+            res.status(401).send({ status: false, message: result.msg });
+        }
+    } catch (error) {
+        console.error("Error in loginUserController:", error);
+        res.status(500).send({ status: false, message: "Internal server error" });
+    }
 };
+
+module.exports = { createUserControllerFn, loginUserControllerFn };

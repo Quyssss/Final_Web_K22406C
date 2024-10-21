@@ -2,15 +2,21 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    Username: {
+    firstname: {
         type: String,
-        required: true,
-        unique: true, // Đảm bảo tên đăng nhập là duy nhất
+        required: true
     },
-    Passwork: {
+    lastname: {
         type: String,
-        required: true,
+        required: true
     },
+    email: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    }
 });
-
-module.exports = mongoose.model('Visitor', userSchema);
+module.exports = mongoose.model('visitors', userSchema);

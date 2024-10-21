@@ -4,8 +4,5 @@ const userController = require('../src/user/userController');
 
 // Đăng ký route cho tạo người dùng
 router.route('/user/create').post(userController.createUserControllerFn);
-
-// Đăng ký route cho tìm một người dùng
-router.route('/user/findOne').get(userController.findOneUserController);
-
+router.route('/user/login').post(userController.loginUserControllerFn);
 module.exports = router;
