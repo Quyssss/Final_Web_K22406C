@@ -12,7 +12,7 @@ const createUserControllerFn = async (req, res) => {
             res.status(400).send({ status: false, message: "Error creating user" });
         }
     } catch (err) {
-        console.error("Error in createUserController:", err);
+        console.error("Error in createUserController:", error);
         res.status(500).send({ status: false, message: "Internal server error" });
     }
 };
