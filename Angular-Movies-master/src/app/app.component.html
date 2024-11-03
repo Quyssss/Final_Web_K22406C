@@ -5,7 +5,7 @@
   }">
 
   <!--Desktop Navbar-->
-  <app-navbar (changeColorTheme)="changeColorTheme($event)"></app-navbar>
+  <app-navbar (changeColorTheme)="changeColorTheme($event)" (searchEvent)="onSearch($event)" ></app-navbar>
   <!--Main Routing-->
   <main role="main" style="min-height: 92vh">
     <router-outlet></router-outlet>

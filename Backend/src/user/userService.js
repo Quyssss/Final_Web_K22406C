@@ -4,13 +4,6 @@ const encryptor = require('simple-encryptor')(key);
 
 module.exports.createuserDBService = async (userDetails) => {
     try {
-        if (!userDetails.firstname || !userDetails.lastname || !userDetails.email || !userDetails.password) {
-            throw new Error("All fields are required");
-        }
-        const existingUser = await userModel.findOne({ email: userDetails.email });
-        if (existingUser) {
-            throw new Error("Email already exists");
-        }
         const userModelData = new userModel({
             firstname: userDetails.firstname,
             lastname: userDetails.lastname,

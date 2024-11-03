@@ -4,16 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { DangnhapComponent } from './core/components/dangnhap/dangnhap.component';
+import { NavbarComponent } from './core/components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DangnhapComponent
+    DangnhapComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppComponent,
-    FormsModule,
+    FormsModule
   ],
   
   providers: [ provideHttpClient()],

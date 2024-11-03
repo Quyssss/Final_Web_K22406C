@@ -1,9 +1,9 @@
 const express = require('express');
+const PORT = 8088;
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const routes = require('./routes/routes');
-
 
 mongoose.set('strictQuery', false);
 

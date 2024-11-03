@@ -34,8 +34,15 @@ export class DangkiComponent {
     this.http.post("http://localhost:8088/user/create",bodyData).subscribe((resultData: any)=>
     {
         console.log(resultData);
-        alert("User Registered Successfully")
-    });
+        if (resultData.status) {
+          this.router.navigateByUrl('/dangnhap');
+          alert("Tạo thành công");
+        } else {
+          alert("Tạo không thành công"); // Hiển thị thông báo lỗi
+          console.log("Error Create");
+        }
+    }
+  );
     } 
     
   save()

@@ -1,0 +1,17 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff; /* Text color: White */
+    background-color: #1a1a1a; /* Background color: Dark Gray */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .container h1, .container h2, .container h3, .container h4 {
+    color: #f39c12; /* Title color: Orange */
+  }
+  
+  /* Other styles can be added here as needed */

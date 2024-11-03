@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {NgForOf, NgOptimizedImage} from "@angular/common";
+import { NgForOf, NgOptimizedImage } from "@angular/common";
+import { RouterLink, RouterLinkActive } from "@angular/router";
 
 @Component({
   selector: 'app-footer',
@@ -7,16 +8,13 @@ import {NgForOf, NgOptimizedImage} from "@angular/common";
   styleUrls: ['./footer.component.scss'],
   imports: [
     NgForOf,
-    NgOptimizedImage
+    NgOptimizedImage,
+    RouterLink,         // Thêm RouterLink để sử dụng routerLink trong template
+    RouterLinkActive    // Thêm RouterLinkActive để sử dụng routerLinkActive trong template
   ],
   standalone: true
 })
 export class FooterComponent {
-
-  socialData = [
-    {url: 'https://twitter.com/JancoBH', name: 'Twitter', img: './assets/svg/twitter.svg'},
-    {url: 'https://github.com/JancoBH', name: 'Github', img: './assets/svg/github.svg'}
-  ];
 
   constructor() { }
 }

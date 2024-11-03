@@ -22,7 +22,7 @@ export class DangnhapComponent {
     console.log('Email:', this.email);
     console.log('Password:', this.password);
   
-    const bodyData = {
+    let bodyData = {
       email: this.email,
       password: this.password,
     };
@@ -31,14 +31,14 @@ export class DangnhapComponent {
       (resultData: any) => {
         console.log(resultData);
         if (resultData.status) {
+          alert("Đăng nhập thành công"); // Hiển thị thông báo lỗi
           this.router.navigateByUrl('/');
         } else {
-          alert("Sai Email hoặc Mật khẩu"); // Hiển thị thông báo lỗi
           console.log("Error login");
         }
       },
       error => {
-        this.errorMessage = "Sai Email hoặc Mật khẩu"; // Thông báo khi có lỗi
+        this.errorMessage = "Đăng nhập không thành công"; // Thông báo khi có lỗi
         alert(this.errorMessage); // Hiển thị thông báo lỗi
         console.error("HTTP Error:", error);
       }

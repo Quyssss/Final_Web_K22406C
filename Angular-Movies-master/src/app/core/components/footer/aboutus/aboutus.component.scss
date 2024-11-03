@@ -1,0 +1,35 @@
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #f1f1f1; /* Màu chữ sáng để nổi bật trên nền đen */
+    background-color: #1a1a1a; /* Đặt nền tối cho khung About Us */
+    border-radius: 8px; /* Thêm bo tròn cho khung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Thêm bóng để tạo chiều sâu */
+  }
+  
+  .about-us-container h1, .about-us-container h2 {
+    color: #f39c12; /* Màu vàng cam nổi bật cho tiêu đề */
+  }
+  
+  .social-media-links a {
+    color: #3498db; /* Màu xanh sáng cho liên kết mạng xã hội */
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .social-media-links a:hover {
+    text-decoration: underline;
+    color: #e74c3c; /* Màu đỏ sáng khi hover */
+  }
+  
+  /* Thêm một chút padding vào phần tử footer để tạo khoảng cách */
+  .footer {
+    padding: 20px 0;
+    background-color: #000; /* Nền footer đen */
+    text-align: center;
+    color: #aaa; /* Màu chữ sáng nhẹ */
+  }
+  

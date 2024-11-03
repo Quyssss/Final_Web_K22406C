@@ -18,7 +18,13 @@ export class AppComponent implements OnInit {
   themeColorList = themeColors;
   themeColorEnum = Color;
   themeColorInit: string = Color.RED;
-
+  onSearch(query: string) {
+    console.log('Searching for:', query);
+    // Thực hiện logic tìm kiếm ở đây, ví dụ:
+    // this.filteredContents = this.nowPlaying.filter(content =>
+    //   content.title.toLowerCase().includes(query.toLowerCase())
+    // );
+  }
   private isBrowser: boolean = isPlatformBrowser(this.platformId);
 
   constructor(

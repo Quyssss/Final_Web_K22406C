@@ -12,13 +12,13 @@
       <a mat-button [routerLink]="'tv-shows'" [routerLinkActive]="['activated-route']" aria-label="TV Shows">TV Shows</a>
 
       <!-- Thêm thanh tìm kiếm -->
-      <form class="search-form" action="/search" method="GET">
-        <input type="text" name="query" placeholder="Search..." class="search-input">
+      <form (submit)="onSearch($event)" class="search-form">
+        <input type="text" [(ngModel)]="searchQuery" placeholder="Search..." class="search-input">
         <button type="submit" class="search-btn">
+          
           <mat-icon>search</mat-icon>
         </button>
       </form>
-
       <!-- Thay đổi theme -->
       <button mat-icon-button [matMenuTriggerFor]="menu" title="Change Color" aria-label="Change Color">
         <mat-icon>format_color_fill</mat-icon>
@@ -32,10 +32,11 @@
           </button>
         </div>
       </mat-menu>
-    </div>
-    <div>
+
       <a mat-button [routerLink]="'/Membership'" [routerLinkActive]="['activated-route']" aria-label="Membership">MemberShip</a>
-      <a mat-button [routerLink]="'/dangnhap'" [routerLinkActive]="['activated-route']" aria-label="Login"><img [ngSrc]="'assets/img/account.png'" width="1" height="1" [priority]="true"></a>
+      <a mat-button [routerLink]="'/dangnhap'" [routerLinkActive]="['activated-route']" aria-label="Login">Login</a>
+      <span *ngIf="userEmail" class="navbar__user-email" style="color: white;">{{ userEmail }}</span>
+      <button *ngIf="userEmail" mat-button (click)="logout()" aria-label="Logout">Logout</button>
     </div>
   </nav>
 </header>

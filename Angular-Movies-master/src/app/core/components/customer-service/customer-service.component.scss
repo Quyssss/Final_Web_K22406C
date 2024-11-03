@@ -1,0 +1,36 @@
+.customer-service {
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  
+    h1, h2, h3 {
+      margin-bottom: 20px;
+    }
+  
+    p {
+      margin-bottom: 10px;
+    }
+  
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 10px;
+  
+      ul, ol {
+        margin-left: 20px;
+      }
+    }
+  
+    strong {
+      font-weight: bold;
+    }
+  
+    em {
+      font-style: italic;
+    }
+  }
+  ul {
+    list-style-type: none;
+  }
+  
